@@ -213,9 +213,3 @@ Run `dna-proto <command> --help` for per-command options.
 | Error tolerance (encoding layer) | ✅ STR quantization bins |
 | AEAD authenticated encryption | ✅ ChaCha20-Poly1305 |
 | Forward secrecy | ✅ Ephemeral X25519 sender key |
-
----
-
-## Licence
-
-MIT — for research and educational use only.
