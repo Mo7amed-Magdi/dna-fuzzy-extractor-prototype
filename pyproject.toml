@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dna-proto"
+version = "0.1.0"
+description = "DNA Fuzzy Extractor Prototype – research prototype for key derivation from biometric DNA features"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "cryptography>=41.0",
+    "click>=8.1",
+    "matplotlib>=3.7",
+    "numpy>=1.25",
+]
+
+[project.scripts]
+dna-proto = "dna_proto.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
